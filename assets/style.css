@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: rgba(255, 255, 255, 0.943);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  color: #333;
+}
+h1 {
+  font-size: 52px;
+  margin-bottom: 2rem;
+}
+ul {
+  list-style: none;
+  width: 100%;
+}
+
+.list-item {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+input[type='checkbox'] {
+  display: none;
+}
+
+.tick {
+  width: 30px;
+  height: 30px;
+  background: #000;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  background-color: azure;
+  border: 3px solid #333;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tick::before {
+  content: '✓';
+  font-size: 20px;
+  display: none;
+}
+
+.list-item span {
+  flex: 1;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.done span {
+  text-decoration: line-through;
+}
+
+.done .tick::before {
+  display: inline;
+}
+
+.delete-todo {
+  padding: 10px;
+  background-color: rgb(245, 19, 19);
+  color: white;
+  font-weight: bold;
+  border: rgb(245, 19, 19);
+  cursor: pointer;
+  margin-left: 2px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  width: 33px;
+  height: 33px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-state {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+
+.first-state .checklist-icon {
+  margin-bottom: 20px;
+}
+
+.first-state h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.first-state p {
+  font-size: 18px;
+}
+
+.list:empty {
+  display: none;
+}
+
+.list:empty + .first-state {
+  display: flex;
+}
+
+form {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.input-todo {
+  font-size: 18px;
+  padding: 12px 14px;
+  width: 100%;
+}
+
+.button-todo {
+  font-size: 30px;
+  padding: 10px 20px;
+  background-color: rgb(245, 19, 19);
+  color: white;
+  font-weight: bold;
+  border: rgb(245, 19, 19);
+  cursor: pointer;
+  margin-left: 2px;
+}
